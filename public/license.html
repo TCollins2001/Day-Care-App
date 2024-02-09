@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANNA'S DAY CARE CENTER | LICENSE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fuzzy+Bubbles&family=Gaegu:wght@300&family=Nanum+Brush+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+  </head>
+  <body class="background4">
+    <header>
+      <div class="nav">
+        <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="appointments.html" class="nav-link">APPOINTMENTS</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li class="nav-item"><a href="license.html" class="nav-link">LICENSE</a></li>
+      </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+  
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+    <div class="box3">
+      <div class="lt">
+        <h1>LICENSING DETAILS</h1>
+        <table>
+          <tr>
+            <td>LICENSE NUMBER</td>
+            <td>156491</td>
+          </tr>
+          <tr>
+            <td>CAPACITY</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>AGE RANGE</td>
+            <td>2-13 YEARS</td>
+          </tr>
+          <tr>
+            <td>ENROLLED IN SUBSIDIZED CHILD CARE PROGRAM</td>
+            <td>YES</td>
+          </tr>
+          <tr>
+            <td>SCHOOLS SERVED</td>
+            <td>MAPLE ELEMENTARY SCHOOL and CHOPTANK ELEMENTARY SCHOOL</td>
+          </tr>
+          <tr>
+            <td>DISTRICT OFFICE</td>
+            <td>REGION 8 - UPPER SHORE OFFICE</td>
+          </tr>
+          <tr>
+            <td>DISTRICT OFFICE PHONE</td>
+            <td>(410) 819-5801</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <ul style="width: 10px;" class="navbar4">
+          <li><a class="appointments" href="appointments.html">APPOINTMENTS</a></li>
+          <li><a class="about" href="about.html">ABOUT</a></li>
+          <li><a class="contact" href="contact.html">CONTACT</a></li>
+          <li><a class="license" href="license.html">LICENSE</a></li>
+    </ul>
+    <footer>
+      <div class="footers3">
+        <div class="logo">
+          <img
+            src="images/ANNAS-DAY-CARE-CENTER.png"
+            alt="logo with kids holding sign"
+          />
+        </div>
+        <ul class="footer3">
+          <li class="pg">OUR MISSION</li>
+          <li class="dis">FOR PARENTS & GUARDIANS</li>
+          <li class="pp">OUR PRIVACY POLICY</li>
+        </ul>
+        <p class="om3">
+          We provide comprehensive, integrated, full-day and full-year services
+          that promotes early learning and school readiness in children. We also
+          devote our time to the development of collaborative programs to
+          support social and emotional language, literacy, cognitive and general
+          knowledge, approaches to learning, physical wellness and motor skills.
+          All parents and guardians can be assured that their children will be
+          offered exceptional care at Anna's Day Care Center!
+        </p>
+        <a style="position: relative; top: -10px;" href="privacypol.html">PRIVACY POLICY</a>
+      </div>
+    </footer>
+  </body>
+</html>

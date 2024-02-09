@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANNA'S DAY CARE CENTER | APPOINTMENTS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fuzzy+Bubbles&family=Gaegu:wght@300&family=Nanum+Brush+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+  </head>
+  <body class="background5">
+    <header>
+      <div class="nav">
+        <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="appointments.html" class="nav-link">APPOINTMENTS</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li class="nav-item"><a href="license.html" class="nav-link">LICENSE</a></li>
+      </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+  
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+    <div class="box4" id="main-content">
+      <h1>REQUEST YOUR APPOINTMENT HERE!</h1>
+      <p class="considering">Thank you for considering Anna's Day Care Center! To initiate the appointment process, please fill out the form below. Please note that once your information is received, Anna's Day Care Center will contact you shortly to confirm all details and schedule a convenient appointment time. If you have any specific preferences or questions, feel free to include them in the 'Additional Comments' section at the bottom of the form and we'll do our best to address them during our follow-up conversation. We look forward to the opportunity to welcome you and your child into our community!</p>
+      <form  method="post" action="" id="appointment-form">
+        <h2>Parent's Information</h2>
+        <br>
+        <br>
+        <label for="parent1FirstName">Parent/Guardian 1 First Name (Primary Contact):</label>
+        <input type="text" id="parent1FirstName" name="parent1FirstName" required>
+
+        <label for="parent1LastName">Parent/Guardian 1 Last Name:</label>
+        <input type="text" id="parent1LastName" name="parent1LastName" required>
+
+        <label for="parent1Email">Email:</label>
+        <input type="email" id="parent1Email" name="parent1Email" required>
+
+        <label for="parent1PhoneNumber">Phone Number:</label>
+        <input type="tel" id="parent1PhoneNumber" name="parent1PhoneNumber" required>
+
+        <br>
+        
+        <p>Optional:</p>
+
+        <br>
+
+        <br>
+
+        <label for="parent2FirstName">Parent/Guardian 2 First Name (Secondary Contact):</label>
+        <input type="text" id="parent2FirstName" name="parent2FirstName">
+
+        <label for="parent2LastName">Parent/Guardian 2 Last Name:</label>
+        <input type="text" id="parent2LastName" name="parent2LastName">
+
+        <label for="parent2Email">Email:</label>
+        <input type="email" id="parent2Email" name="parent2Email">
+
+        <label for="parent2PhoneNumber">Phone Number:</label>
+        <input type="tel" id="parent2PhoneNumber" name="parent2PhoneNumber">
+        
+        <br>
+        <br>
+        <br>
+
+        <p class="preference">Check Which Form Of Contact You Would Prefer:</p>
+        <br>
+        <label>Phone</label>
+        <input type="radio" name="contactPreference" value="Phone" required> 
+        <label>Email</label>
+        <input type="radio" name="contactPreference" value="Email" required>
+
+        <div class="appoint-divider"></div>
+
+        <h2>Child's Information</h2>
+        <br>
+        <br>
+        <h3>For Additional Children (Add & Scroll)</h3>
+        <br>
+        <div id="children-container" style="max-height: 300px; overflow-y: auto;">
+        <div class="child-section">
+        <label for="childFirstName">Child First Name:</label>
+        <input type="text" id="childFirstName" name="childFirstName" required>
+
+        <label for="childLastName">Child Last Name:</label>
+        <input type="text" id="childLastName" name="childLastName" required>
+
+        <label for="childDOB">Date of Birth:</label>
+        <input type="date" id="childDOB" name="childDOB" required>
+
+        <button type="button" id="remove-button" onclick="removeChildSection(this)">Remove</button>
+      </div>
+    </div>
+
+        <button type="button" onclick="addMoreChildren()">Add Another Child</button>
+
+        <div class="appoint-divider"></div>
+
+        <h2>Additional Comments:</h2>
+        <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
+
+        <button type="submit" id="submit-in" onclick="submitForm('in-person')">Request In-Person Appointment</button>
+        <button type="submit" id="submit-vir" onclick="submitForm('virtual')">Request Virtual Appointment</button>
+
+        <div id="loading-spinner-form">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Sending...</span>
+          </div>
+        </div>
+      </form>
+      <h3><a class="cancel-click" href="cancel.html">Need to cancel a previously requested appointment? Click here.</a></h3>
+    </div>
+      <div class="thank-you-message" id="thank-you-message" style="display: none; text-align: center; background-color: white; border: 2px solid black; width: 70%; border-radius: 10px; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 50px;">
+        <h1 style="padding-bottom: 30px;">ANNA'S DAY CARE CENTER THANKS YOU FOR REQUESTING YOUR APPOINTMENT!</h1>
+        <p style="font-size: 20px;">Your information has been received and you will receive a response shortly based on your contact preferences.</p>
+        <h3><a class="thank-cancel-click" href="cancel.html">Need to cancel a previously requested appointment? Click here.</a></h3>
+      </div>
+      <ul style="width: 10px;" class="navbar5">
+        <li><a class="appointments" href="appointments.html">APPOINTMENTS</a></li>
+            <li><a class="about" href="about.html">ABOUT</a></li>
+            <li><a class="contact" href="contact.html">CONTACT</a></li>
+            <li><a class="license" href="license.html">LICENSE</a></li>
+      </ul>
+      <footer>
+        <div class="footers5">
+          <div class="logo">
+            <img
+              src="images/ANNAS-DAY-CARE-CENTER.png"
+              alt="logo with kids holding sign"
+            />
+          </div>
+          <ul class="footer5">
+            <li class="pg">OUR MISSION</li>
+            <li class="dis">FOR PARENTS & GUARDIANS</li>
+            <li class="pp">OUR PRIVACY POLICY</li>
+          </ul>
+          <p class="om5">
+            We provide comprehensive, integrated, full-day and full-year services
+            that promotes early learning and school readiness in children. We also
+            devote our time to the development of collaborative programs to
+            support social and emotional language, literacy, cognitive and general
+            knowledge, approaches to learning, physical wellness and motor skills.
+            All parents and guardians can be assured that their children will be
+            offered exceptional care at Anna's Day Care Center!
+          </p>
+          <a style="position: relative; top: -10px;" href="privacypol.html">PRIVACY POLICY</a>
+        </div>
+      </footer>
+      <script>
+
+
+document.getElementById('appointment-form').addEventListener('submit', function (event) {
+  event.preventDefault(); 
+
+  const appointmentType = event.submitter.id === 'submit-in' ? 'in-person' : 'virtual';
+  submitForm(appointmentType);
+});
+
+async function submitForm(appointmentType) {
+  if (validateForm()) {
+  const formData = new FormData(document.getElementById('appointment-form'));
+
+  const childrenData = [];
+    document.querySelectorAll('.child-section').forEach((childSection) => {
+      const childData = {};
+      childSection.querySelectorAll('input').forEach((input) => {
+        childData[input.name] = input.value;
+      });
+      childrenData.push(childData);
+    });
+
+    formData.append('childrenData', JSON.stringify(childrenData));
+    formData.append('appointmentType', appointmentType);
+
+  formData.append('appointmentType', appointmentType);
+
+  try {
+    showLoadingIndicator();
+    const response = await fetch('/api/submitForm', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    });
+
+    if (response.ok) {
+        hideLoadingIndicator(); 
+        showThankYouMessage();
+      } else {
+        hideLoadingIndicator(); 
+        console.error('Failed to submit form');
+      }
+    } catch (error) {
+      hideLoadingIndicator(); 
+      console.error('Error submitting form', error);
+    }
+  }
+}
+
+function showLoadingIndicator() {
+  const loadingSpinner = document.getElementById('loading-spinner-form');
+  loadingSpinner.style.display = 'block';
+}
+
+function hideLoadingIndicator() {
+  const loadingSpinner = document.getElementById('loading-spinner-form');
+  loadingSpinner.style.display = 'none';
+}
+
+        const mainContent = document.getElementById("main-content");
+        const thankYouMessage = document.getElementById("thank-you-message");
+        const appointmentForm = document.getElementById("appointment-form");
+        const footer = document.querySelector("footer");
+        const navbar5 = document.querySelector(".navbar5");
+
+      function showThankYouMessage() {
+        mainContent.style.display = "none";
+        thankYouMessage.style.display = "block";
+        footer.style.display = "none";
+        navbar5.style.display = "none";
+      }
+
+      function validateForm() {
+    const requiredFields = document.querySelectorAll('[required]');
+    for (const field of requiredFields) {
+      if (!field.value.trim()) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+        function addMoreChildren() {
+          var childrenContainer = document.getElementById('children-container');
+          
+          
+          var childSectionClone = childrenContainer.querySelector('.child-section').cloneNode(true);
+      
+          
+          var inputs = childSectionClone.querySelectorAll('input');
+          inputs.forEach(function (input) {
+            input.value = '';
+          });
+      
+          
+          childrenContainer.appendChild(childSectionClone);
+        }
+
+        function removeChildSection(button) {
+          var childSection = button.parentNode;
+          var childrenContainer = document.getElementById('children-container');
+
+          
+          if (childrenContainer.childElementCount > 1) {
+            childrenContainer.removeChild(childSection);
+          }
+        }
+      </script>
+  </body>
+</html>

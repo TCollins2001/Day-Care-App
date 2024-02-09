@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="At Anna's Day Care Center, young minds are nurtured with love, laughter, and learning. Anna's Day Care Center has a dedicated provider that creates a safe and welcoming space where children can grow, play, and discover the joy of learning every day. Join the community to provide your child with a foundation for a bright future!"/>
+    <title>ANNA'S DAY CARE CENTER | HOME</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fuzzy+Bubbles&family=Gaegu:wght@300&family=Nanum+Brush+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+  </head>
+  <body class="background">
+    <header>
+      <div class="nav">
+        <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="appointments.html" class="nav-link">APPOINTMENTS</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li class="nav-item"><a href="license.html" class="nav-link">LICENSE</a></li>
+      </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+  
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+    <img class="provider" src="images/anna-herself.jpg" alt="image of day care provider">
+    <div class="header">
+      <h1>
+        <span style="color: red">A</span><span style="color: blue">N</span
+        ><span style="color: yellow">N</span><span style="color: green">A</span
+        ><span style="color: red">'</span><span style="color: blue">S</span
+        ><span style="color: yellow"> D</span><span style="color: green">A</span
+        ><span style="color: red">Y</span><span style="color: blue"> C</span
+        ><span style="color: yellow">A</span><span style="color: green">R</span
+        ><span style="color: red">E</span><span style="color: blue"> C</span
+        ><span style="color: yellow">E</span><span style="color: green">N</span
+        ><span style="color: red">T</span><span style="color: blue">E</span
+        ><span style="color: yellow">R</span>
+      </h1>
+    </div>
+    <div class="intro">
+      <p>"A Community Coming Together For Children"</p>
+    </div>
+    <div class="buttons">
+      <button
+        onclick="window.location.href='appointments.html';"
+        class="appointments2"
+        type="button"
+      >
+      REQUEST APPOINTMENT
+      </button>
+      <button
+        onclick="window.location.href='contact.html';"
+        class="contact2"
+        type="button"
+      >
+        CONTACT
+      </button>
+    </div>
+    <ul style="width: 10px;" class="navbar2">
+          <li><a class="appointments" href="appointments.html">APPOINTMENTS</a></li>
+          <li><a class="about" href="about.html">ABOUT</a></li>
+          <li><a class="contact" href="contact.html">CONTACT</a></li>
+          <li><a class="license" href="license.html">LICENSE</a></li>
+        </ul>
+    <footer>
+      <div class="footers">
+        <div class="logo">
+          <img
+            src="images/ANNAS-DAY-CARE-CENTER.png"
+            alt="logo with kids holding sign"
+          />
+        <ul class="footer">
+          <li class="pg">OUR MISSION</li>
+          <li class="dis">FOR PARENTS & GUARDIANS</li>
+          <li class="pp">OUR PRIVACY POLICY</li>
+        </ul>
+        <p class="om">
+          We provide comprehensive, integrated, full-day and full-year services
+          that promotes early learning and school readiness in children. We also
+          devote our time to the development of collaborative programs to
+          support social and emotional language, literacy, cognitive and general
+          knowledge, approaches to learning, physical wellness and motor skills.
+          All parents and guardians can be assured that their children will be
+          offered exceptional care at Anna's Day Care Center!
+        </p>
+        <a style="position: relative; top: -10px;" href="privacypol.html">PRIVACY POLICY</a>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>

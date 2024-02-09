@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANNA'S DAY CARE CENTER | CANCELLATION</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fuzzy+Bubbles&family=Gaegu:wght@300&family=Nanum+Brush+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+  </head>
+  <body class="background5">
+    <header>
+      <div class="nav">
+        <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="appointments.html" class="nav-link">APPOINTMENTS</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li class="nav-item"><a href="license.html" class="nav-link">LICENSE</a></li>
+      </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+  
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+    <div class="box6" id="main-content">
+      <h1>CANCEL YOUR APPOINTMENT HERE</h1>
+      <p class="notifying">Thank you for notifying us of your cancellation by filling out this form to confirm your information. Anna's Day Care Center understands that circumstances may change and appreciates you taking the time to consider the center for your child.</p>
+      <form  method="post" action="" id="cancel-form">
+        <br>
+        <br>
+        <input type="hidden" id="cancelAppointment" name="cancelAppointment" value="true">
+        <label for="parent1FirstName">Parent/Guardian 1 First Name (Primary Contact):</label>
+        <input type="text" id="parent1FirstName" name="parent1FirstName" required>
+
+        <label for="parent1LastName">Parent/Guardian 1 Last Name:</label>
+        <input type="text" id="parent1LastName" name="parent1LastName" required>
+
+        <label for="parent1Email">Email:</label>
+        <input type="email" id="parent1Email" name="parent1Email" required>
+
+        <label for="parent1PhoneNumber">Phone Number:</label>
+        <input type="tel" id="parent1PhoneNumber" name="parent1PhoneNumber" required>
+
+        <button type="submit" id="submit-cancel">Cancel Appointment</button>
+
+        <div id="loading-spinner-form">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Sending...</span>
+          </div>
+        </div>
+      </form>
+      </div>
+      <div class="cancel-message" id="cancel-message" style="display: none; text-align: center; background-color: white; border: 2px solid black; width: 70%; border-radius: 10px; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 50px;">
+        <h1 style="padding-bottom: 30px;">THANK YOU FOR CONFIRMING YOUR CANCELLATION</h1>
+        <p style="font-size: 20px;">Your cancellation request has been received and you will receive a confirmation shortly. If you have any questions or need further assistance, please don't hesitate to contact the center.</p>
+
+        <br>
+
+        <p style="font-size: 18px;">Best regards, Anna's Day Care Center</p>
+      </div>
+      <script>
+
+
+        document.getElementById('cancel-form').addEventListener('submit', async function (event) {
+        event.preventDefault(); 
+
+        const formData = new FormData(document.getElementById('cancel-form'));
+    
+          try {
+            showLoadingIndicator();
+            const response = await fetch('/api/submitForm', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(Object.fromEntries(formData)),
+            });
+
+              if (response.ok) {
+                hideLoadingIndicator(); 
+                showCancellationMessage();
+              } else {
+                hideLoadingIndicator(); 
+                console.error('Failed to cancel appointment');
+              }
+            } catch (error) {
+              hideLoadingIndicator(); 
+              console.error('Error cancelling appointment:', error);
+            }
+          });
+
+          function showLoadingIndicator() {
+            const loadingSpinner = document.getElementById('loading-spinner-form');
+            loadingSpinner.style.display = 'block';
+          }
+
+          function hideLoadingIndicator() {
+            const loadingSpinner = document.getElementById('loading-spinner-form');
+            loadingSpinner.style.display = 'none';
+          }
+    
+          function showCancellationMessage() {
+            const mainContent = document.getElementById("main-content");
+            const cancelMessage = document.getElementById("cancel-message");
+    
+            mainContent.style.display = "none";
+            cancelMessage.style.display = "block";
+    }
+      </script>
+      </body>
+      </html>
