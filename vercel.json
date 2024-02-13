@@ -1,7 +1,5 @@
 {
-  "functions": {
-    "includeFiles": ["/package-lock.json"]
-  },
+  "exclude": ["package-lock.json"],
   "rewrites": [
     { "source": "/index.html", "destination": "/Home" },
     { "source": "/about.html", "destination": "/About" },
@@ -12,4 +10,5 @@
     { "source": "/cancel.html", "destination": "/Cancellation" }
   ]
 }
+
 
