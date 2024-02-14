@@ -1,5 +1,4 @@
 {
-  "exclude": ["package-lock.json"],
   "rewrites": [
     { "source": "/index.html", "destination": "/Home" },
     { "source": "/about.html", "destination": "/About" },
