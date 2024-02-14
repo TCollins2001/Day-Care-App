@@ -1,12 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/index.html", "destination": "/Home" },
-    { "source": "/about.html", "destination": "/About" },
-    { "source": "/appointments.html", "destination": "/Appointments" },
-    { "source": "/contact.html", "destination": "/Contact" },
-    { "source": "/license.html", "destination": "/License" },
-    { "source": "/privacypol.html", "destination": "/Privacy-Policy" },
-    { "source": "/cancel.html", "destination": "/Cancellation" }
+  "routes": [
+    { "source": "/", "destination": "/Home" }
   ]
 }
 
