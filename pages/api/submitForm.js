@@ -192,7 +192,7 @@ ${appointmentType === 'virtual' ? `
 
   <br>
 
-  <h3><a style="text-align: center; color: red;" class="thank-cancel-click" href="cancel.html">Need to cancel a previously requested appointment? Click here.</a></h3>
+  <h3><a style="text-align: center; color: red;" class="thank-cancel-click" href="https://www.annasdaycarecenter.com/cancel">Need to cancel a previously requested appointment? Click here.</a></h3>
 
   <br>
 
