@@ -229,6 +229,8 @@ html, body {
   .agep {
     font-size: 20px;
     margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .img {
@@ -388,6 +390,8 @@ html, body {
     position: relative;
     margin-top: -10%;
     color: red;
+    padding-left: 10px;
+    padding-right: 10px;
 
   }
 
@@ -1343,7 +1347,6 @@ display: none;
     color: red;
     padding-left: 10px;
     padding-right: 10px;
-
   }
 
   .footers2 {
@@ -2136,6 +2139,8 @@ display: none;
   .agep {
     font-size: 20px;
     margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .img {
@@ -2294,7 +2299,8 @@ display: none;
     position: relative;
     top: 60px;
     color: red;
-
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .footers2 {
@@ -3097,6 +3103,8 @@ display: none;
   .agep {
     font-size: 20px;
     margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .img {
@@ -3255,7 +3263,8 @@ display: none;
     position: relative;
     top: 60px;
     color: red;
-
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .footers2 {
