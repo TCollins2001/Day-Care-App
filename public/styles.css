@@ -875,7 +875,6 @@ iframe {
   font-size: 13px;
   text-align: center;
   padding-bottom: 45px;
-  padding: 20px;
 }
 
 .footers3 a {
@@ -1129,6 +1128,8 @@ display: none;
       font-size: 13px;
       text-align: center;
       padding-bottom: 45px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
     
     .footers a {
@@ -1819,7 +1820,6 @@ iframe {
   font-size: 13px;
   text-align: center;
   padding-bottom: 45px;
-  padding: 20px;
 }
 
 .footers3 a {
@@ -2774,7 +2774,6 @@ iframe {
   font-size: 13px;
   text-align: center;
   padding-bottom: 45px;
-  padding: 20px;
 }
 
 .footers3 a {
@@ -3728,7 +3727,6 @@ iframe {
   font-size: 13px;
   text-align: center;
   padding-bottom: 45px;
-  padding: 20px;
 }
 
 .footers3 a {
