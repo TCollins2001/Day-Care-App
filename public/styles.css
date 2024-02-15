@@ -957,7 +957,7 @@ display: none;
   .background {
     margin: 0;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url("images/children3-min.jpg");
     background-size: cover;
@@ -1900,7 +1900,7 @@ display: none;
   .background {
     margin: 0;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url("images/children3-min.jpg");
     background-size: cover;
@@ -2853,7 +2853,7 @@ display: none;
   .background {
     margin: 0;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url("images/children3-min.jpg");
     background-size: cover;
