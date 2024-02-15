@@ -523,6 +523,10 @@ input[type="radio"]:checked {
   border-color: black;
 }
 
+#childDOB {
+  width: 200px;
+}
+
 .appoint-divider {
   border-bottom: 1px solid black;
   padding-top: 20px;
@@ -1474,6 +1478,10 @@ input[type="radio"] {
 input[type="radio"]:checked {
   background-color: #FFD1DC;
   border-color: black;
+}
+
+#childDOB {
+  width: 200px;
 }
 
 .appoint-divider {
@@ -2428,6 +2436,10 @@ input[type="radio"] {
 input[type="radio"]:checked {
   background-color: #FFD1DC;
   border-color: black;
+}
+
+#childDOB {
+  width: 200px;
 }
 
 .appoint-divider {
