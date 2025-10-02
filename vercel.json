@@ -1,13 +1,16 @@
 {
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "about.html", "use": "@vercel/static" },
-    { "src": "contact.html", "use": "@vercel/static" },
-    { "src": "appointments.html", "use": "@vercel/static" },
-    { "src": "license.html", "use": "@vercel/static" },
-    { "src": "api/send-email.js", "use": "@vercel/node" }
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "styles.css", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" },
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/(.*)", "dest": "/$1.html" }
   ]
 }
+
 
 
 
