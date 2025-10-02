@@ -212,7 +212,7 @@ async function submitForm(appointmentType) {
 
   try {
     showLoadingIndicator();
-    const response = await fetch('/api/submitForm', {
+    const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
