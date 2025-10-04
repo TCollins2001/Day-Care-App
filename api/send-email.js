@@ -15,10 +15,26 @@ export default async function handler(req, res) {
     to: "annasdaycarecenter@gmail.com",
     subject: "Appointment Cancellation Request",
     html: `
-      <h2>Appointment Cancellation Notice</h2>
-      <p><b>Parent:</b> ${req.body.parent1FirstName} ${req.body.parent1LastName}</p>
-      <p><b>Email:</b> ${req.body.parent1Email}</p>
-      <p><b>Phone:</b> ${req.body.parent1PhoneNumber}</p>
+    <div style="background: linear-gradient(135deg, #ef4136, #fbb040); color: white; text-align: center; padding: 15px;">
+    <h2 style="margin: 0; font-size: 22px;">
+      Appointment Cancellation Notice</h2>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 2px solid orangered;">
+        <tr style="background-color: #f9f9f9;">
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Parent:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">${req.body.parent1FirstName} ${req.body.parent1LastName}</td>
+        </tr>
+         <tr style="background-color: #f9f9f9;">
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">${req.body.parent1Email}</td>
+        </tr>
+        <tr style="background-color: #f9f9f9;">
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">${req.body.parent1PhoneNumber}</td>
+        </tr>
+        </table>
+   
       <p>This parent has requested to cancel their appointment.</p>
     `,
   });
@@ -28,18 +44,23 @@ export default async function handler(req, res) {
     to: req.body.parent1Email,
     subject: "Your Appointment Cancellation Confirmation",
     html: `
-      <h2>Dear ${req.body.parent1FirstName},</h2>
+    <div style="background: linear-gradient(135deg, #ef4136, #fbb040); color: white; text-align: center; padding: 15px;">
+    <h2 style="margin: 0; font-size: 22px;">
+    Dear ${req.body.parent1FirstName},</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 2px solid orangered;">
       <p>Your appointment cancellation request has been received.</p>
       <p>If you wish to reschedule or have any questions, please contact us anytime.</p>
-      <br>
-      <p>Anna's Day Care Center</p>
+      
+       <div style="background: linear-gradient(135deg, #ef4136, #fbb040); color: white; text-align: center; padding: 10px; font-size: 14px;">
+      <p style="margin: 0;">ANNA'S DAY CARE CENTER</p>
+      <p style="margin: 0; color: #FFFFFF">Email: annasdaycarecenter@gmail.com</p>
+    </div>
+  </div>
     `,
   });
 
   return res.status(200).json({ success: true });
 }
-
-
 
 
     const {
