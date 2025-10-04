@@ -50,7 +50,7 @@ export default async function handler(req, res) {
     <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 2px solid orangered;">
       <p>Your appointment cancellation request has been received.</p>
       <p>If you wish to reschedule or have any questions, please contact us anytime.</p>
-      
+
        <div style="background: linear-gradient(135deg, #ef4136, #fbb040); color: white; text-align: center; padding: 10px; font-size: 14px;">
       <p style="margin: 0;">ANNA'S DAY CARE CENTER</p>
       <p style="margin: 0; color: #FFFFFF">Email: annasdaycarecenter@gmail.com</p>
@@ -73,7 +73,7 @@ export default async function handler(req, res) {
       parent2Email,
       parent2PhoneNumber,
       contactPreference,
-      childrenData,
+      formattedChildren,
       appointmentType,
       comments,
     } = req.body;
@@ -131,7 +131,7 @@ export default async function handler(req, res) {
 
          <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${formattedChildren}</p></td>
         </tr>
 
         <tr>
@@ -203,7 +203,7 @@ export default async function handler(req, res) {
 
          <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${formattedChildren}</p></td>
         </tr>
         </table>
 
