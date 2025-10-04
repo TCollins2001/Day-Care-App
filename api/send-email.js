@@ -24,9 +24,9 @@ export default async function handler(req, res) {
     } = req.body;
 
     await resend.emails.send({
-      from: "ANNA'S DAY CARE CENTER <postmaster@tc-web-designs.com", 
+      from: "ANNA'S DAY CARE CENTER <postmaster@tc-web-designs.com>", 
       to: "annasdaycarecenter@gmail.com",
-      subject: "New Appointment Request - ${appointmentType}",
+      subject: `New Appointment Request - ${appointmentType}`,
       html: `
         <h2>New Appointment Request</h2>
         <p><b>Parent 1:</b> ${parent1FirstName} ${parent1LastName}</p>
