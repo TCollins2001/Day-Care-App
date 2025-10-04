@@ -8,6 +8,40 @@ export default async function handler(req, res) {
   }
 
   try {
+
+    if (req.body.cancelAppointment) {
+  await resend.emails.send({
+    from: "ANNA'S DAY CARE CENTER <postmaster@tc-web-designs.com>",
+    to: "annasdaycarecenter@gmail.com",
+    subject: "Appointment Cancellation Request",
+    html: `
+      <h2>Appointment Cancellation Notice</h2>
+      <p><b>Parent:</b> ${req.body.parent1FirstName} ${req.body.parent1LastName}</p>
+      <p><b>Email:</b> ${req.body.parent1Email}</p>
+      <p><b>Phone:</b> ${req.body.parent1PhoneNumber}</p>
+      <p>This parent has requested to cancel their appointment.</p>
+    `,
+  });
+
+  await resend.emails.send({
+    from: "ANNA'S DAY CARE CENTER <postmaster@tc-web-designs.com>",
+    to: req.body.parent1Email,
+    subject: "Your Appointment Cancellation Confirmation",
+    html: `
+      <h2>Dear ${req.body.parent1FirstName},</h2>
+      <p>Your appointment cancellation request has been received.</p>
+      <p>If you wish to reschedule or have any questions, please contact us anytime.</p>
+      <br>
+      <p>Anna's Day Care Center</p>
+    `,
+  });
+
+  return res.status(200).json({ success: true });
+}
+
+
+
+
     const {
       parent1FirstName,
       parent1LastName,
@@ -55,7 +89,6 @@ export default async function handler(req, res) {
         <p>Anna’s Day Care Center</p>
       `,
     });
-
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error('Resend error:', error);
