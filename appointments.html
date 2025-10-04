@@ -205,12 +205,12 @@ async function submitForm(appointmentType) {
       childrenData.push(childData);
     });
 
-    const childrenList = JSON.parse(childrenData);
-    const formattedChildren = childrenList
-  .map(c => `${c.childFirstName} ${c.childLastName} (DOB: ${c.childDOB})`)
-  .join('<br>');
-    formData.append('appointmentType', appointmentType);
+    const formattedChildren = childrenData
+      .map((c) => `${c.childFirstName} ${c.childLastName} (DOB: ${c.childDOB})`)
+      .join('<br>');
 
+  formData.append('childrenData', formattedChildren);
+    
   formData.append('appointmentType', appointmentType);
 
   try {
