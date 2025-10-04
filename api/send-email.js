@@ -73,7 +73,7 @@ export default async function handler(req, res) {
       parent2Email,
       parent2PhoneNumber,
       contactPreference,
-      formattedChildren,
+      childrenData,
       appointmentType,
       comments,
     } = req.body;
@@ -131,7 +131,7 @@ export default async function handler(req, res) {
 
          <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p>${formattedChildren}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
         </tr>
 
         <tr>
@@ -203,7 +203,7 @@ export default async function handler(req, res) {
 
          <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p>${formattedChildren}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
         </tr>
         </table>
 
