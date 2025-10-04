@@ -72,50 +72,50 @@ export default async function handler(req, res) {
       <p style="font-size: 16px;">A new appointment request has been submitted.</p>
       <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 2px solid orangered;">
         <tr style="background-color: #f9f9f9;">
-        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Name:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Parent 1:</b>${parent1FirstName} ${parent1LastName}</p></td>
+        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Parent 1:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1FirstName} ${parent1LastName}</p></td>
         </tr>
         <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Email:</b>${parent1Email}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1Email}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Phone:</b>${parent1PhoneNumber}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1PhoneNumber}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Parent 2:</b>${parent2FirstName || 'N/A'} ${parent2LastName || ''}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Parent 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2FirstName || 'N/A'} ${parent2LastName || ''}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Email:</b> ${parent2Email || 'N/A'}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2Email || 'N/A'}</p></td>
         </tr>
 
          <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Phone:</b> ${parent2PhoneNumber || 'N/A'}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2PhoneNumber || 'N/A'}</p></td>
         </tr>
         
       
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Preferred Contact:</b> ${contactPreference}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Preferred Contact:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${contactPreference}</p></td>
         </tr>
 
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Appointment Type:</b> ${appointmentType}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Appointment Type:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${appointmentType}</p></td>
         </tr>
 
          <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Children:</b> ${childrenData}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
         </tr>
 
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Comments:</b> ${comments || 'N/A'}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Comments:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${comments || 'N/A'}</p></td>
         </tr>
         </table>
 
@@ -144,51 +144,51 @@ export default async function handler(req, res) {
      <p style="font-size: 16px;">Here are your request details: </p>
      <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 2px solid orangered;">
         <tr style="background-color: #f9f9f9;">
-        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Name:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Parent 1:</b>${parent1FirstName} ${parent1LastName}</p></td>
+        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Parent 1:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1FirstName} ${parent1LastName}</p></td>
         </tr>
         <tr>
           <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Email:</b>${parent1Email}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1Email}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Phone:</b>${parent1PhoneNumber}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent1PhoneNumber}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Parent 2:</b>${parent2FirstName || 'N/A'} ${parent2LastName || ''}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Parent 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2FirstName || 'N/A'} ${parent2LastName || ''}</p></td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Email:</b> ${parent2Email || 'N/A'}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2Email || 'N/A'}</p></td>
         </tr>
 
          <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Phone:</b> ${parent2PhoneNumber || 'N/A'}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone 2:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${parent2PhoneNumber || 'N/A'}</p></td>
         </tr>
         
       
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Preferred Contact:</b> ${contactPreference}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Preferred Contact:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${contactPreference}</p></td>
         </tr>
 
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Appointment Type:</b> ${appointmentType}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Appointment Type:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${appointmentType}</p></td>
         </tr>
 
          <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email:</td>
-          <td style="padding: 10px; border: 1px solid #ddd;"><p><b>Children:</b> ${childrenData}</p></td>
+          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Children:</td>
+          <td style="padding: 10px; border: 1px solid #ddd;"><p>${childrenData}</p></td>
         </tr>
         </table>
 
 
         <p>If you need to cancel or update, please reply to this email.</p>
-        
+
         <div style="background: linear-gradient(135deg, #ef4136, #fbb040); color: white; text-align: center; padding: 10px; font-size: 14px;">
       <p style="margin: 0;">ANNA'S DAY CARE CENTER</p>
       <p style="margin: 0; color: #FFFFFF">Email: annasdaycarecenter@gmail.com</p>
